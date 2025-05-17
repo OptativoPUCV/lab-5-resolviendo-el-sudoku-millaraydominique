@@ -59,7 +59,7 @@ int is_valid(Node* n){
 
     for (j = 0 ; j < 9 ; j++) {
       int visited[10] = {0};
-      for (; i < 9 ; i++) {
+      for (i = 0; i < 9 ; i++) {
         int num = n->sudo[i][j];
         if (num != 0) {
           if (visited[num]) return 0;
@@ -68,15 +68,15 @@ int is_valid(Node* n){
       }
     }
 
-    for (int bloque_fila = 0 ; bloque_fila < 3 ; bloque_fila++) {
-      for (int bloque_col = 0 ; bloque_col < 3 ; bloque_col++) {
+    for (int bloqueFila = 0 ; bloqueFila < 3 ; bloqueFila++) {
+      for (int bloqueCol = 0 ; bloqueCol < 3 ; bloqueCol++) {
         int visited[10] = {0};
 
-        for (int fila = 0 ; fila < 3 ; fila++) {
-          for (int col = 0 ; col < 3 ; col++) {
-            int i = 3 * bloque_fila + fila;
-            int j = 3 * bloque_col + col;
-            int num = n->sudo[i][j];
+        for (int i = 0 ; i < 3 ; i++) {
+          for (int j = 0 ; j < 3 ; j++) {
+            int fila = bloqueFila * 3 + i;
+            int col = bloqueCol * 3 + j;
+            int num = n->sudo[fila][col];
             if (num != 0) {
               if (visited[num]) return 0;
               visited[num] = 1;
