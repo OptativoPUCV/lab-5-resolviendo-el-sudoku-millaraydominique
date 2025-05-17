@@ -54,3 +54,14 @@ sudoku.c:131:11: error: unused variable 'current' [-Werror=unused-variable]
            ^~~~~~~
 cc1.exe: all warnings being treated as errors
 02dd002
+Sat, May 17, 2025 12:36:13 PM: 
+ sudoku.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+Compilation failed
+In file included from test.c:5:0:
+sudoku.c: In function 'DFS':
+sudoku.c:134:5: error: value computed is not used [-Werror=unused-value]
+     *cont++;
+     ^~~~~~~
+cc1.exe: all warnings being treated as errors
+7fd4e4b
