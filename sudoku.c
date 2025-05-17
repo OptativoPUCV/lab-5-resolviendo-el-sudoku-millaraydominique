@@ -131,7 +131,7 @@ Node* DFS(Node* initial, int* cont){
     Node *current = top(stack);
     pop(stack);
 
-    *cont++;
+    (*cont)++;
 
     if (is_final(initial)) {
       return initial;
