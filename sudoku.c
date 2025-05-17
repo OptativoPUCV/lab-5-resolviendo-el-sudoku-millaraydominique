@@ -133,8 +133,8 @@ Node* DFS(Node* initial, int* cont){
 
     (*cont)++;
 
-    if (is_final(initial)) {
-      return initial;
+    if (is_final(current)) {
+      return current;
     }
     List* adj_nodes = get_adj_nodes(current);
     Node* child = first(adj_nodes);
