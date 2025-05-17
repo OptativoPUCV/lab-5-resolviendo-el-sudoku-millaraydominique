@@ -136,6 +136,7 @@ Node* DFS(Node* initial, int* cont){
     if (is_final(current)) {
       return current;
     }
+
     List* adj_nodes = get_adj_nodes(current);
     Node* child = first(adj_nodes);
     while (child != NULL) {
@@ -149,7 +150,7 @@ Node* DFS(Node* initial, int* cont){
 
 
 
-/*
+
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -160,4 +161,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
